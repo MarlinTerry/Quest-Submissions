@@ -7,9 +7,29 @@
 3. A transaction is a paid function that changes data on the Blockchain. A script is a free transaction that allows you to view data, but does not change the data.
 
 
-#Chapter 2 Day 2
+# Chapter 1 Day 2
 
 1. The Five Cadence Programming Language Pillars: Safety and Security, Clarity, Approachability, Developer Experience, and Resource Oriented Programming.
 2. Flow was developed largely in response to the faults of the Ethereum blockchain, and the five pillars represent the biggest improvements Flow seeks to make. So keeping these five items top of mind and at the forefront of Cadence is essential.
 
  
+# Chapter 2 Day 1
+
+1. pub contract JacobTucker {
+  pub let is: String
+
+  init() {
+    self.is = "the best"
+
+  }
+
+}
+
+2. import JacobTucker from 0x03
+
+pub fun main(): String  {
+  return JacobTucker.is
+  
+}
+
+# Chapter 2 Day 2 
