@@ -34,4 +34,62 @@ pub fun main(): String  {
 
 # Chapter 2 Day 2 
 
+1. changeGreeting would be used to make changes on the blockchain. Scripts are only for viewing data, so you couldn't use changeGreeting in a script.
+2. AuthAccount means an account (or user) on Flow.
+3. Prepare access the data in your account. Execute changes data on the blockchain.
+4. Contract 
+pub contract HelloWorld {
+
+    pub var greeting: String
+    
+    pub var myNumber: Int
+
+    pub fun changeGreeting(newGreeting: String) {
+    self.greeting = newGreeting
+    }
+
+    pub fun updateMyNumber(newNumber: Int) {
+        self.myNumber = newNumber
+        }
+
+    init() {
+        self.greeting = "Hello, World!"
+        self.myNumber = 0
+    }
+    
+}
+
+
+Transaction 
+
+import HelloWorld from 0x01
+
+transaction(myNewNumber: Int) {
+
+  prepare(signer: AuthAccount) {}
+
+  execute {
+    HelloWorld.updateMyNumber(newNumber: myNewNumber)
+    }
+}
+
+Script
+
+import HelloWorld from 0x01
+
+pub fun main(): Int {
+    return HelloWorld.myNumber
+}
+
+# Chapter 2 Day 3
+
+
+
+
+
+
+
+
+
+
 
